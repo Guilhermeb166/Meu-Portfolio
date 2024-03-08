@@ -90,33 +90,33 @@ main{
     margin-left: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.337);
 }
- .sobre-mim {
+#sobre-mim {
     width: 100%;
     padding-top: 75px;
     border-radius: 10px;
    
 }
-.sobre-mim h1{
+#sobre-mim h1{
     background-image: linear-gradient(to right, var(--cor03),var(--cor00));
     padding: 8px;
     color: var(--cor00);
     text-shadow:  1px 1px 1px black;
     font-size: 2em;
 }
-.sobre-mim p{
+#sobre-mim p{
     text-align: justify;
     font-size:1.2em;
     margin: 15px 10px 55px 5px;
     text-indent: 10px;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.337);
 }
-.sobre-mim a{
+#sobre-mim a{
     text-decoration: none;
     text-align: center;
     margin: 10px;
     
 }
-.sobre-mim h4{
+#sobre-mim h4{
     background-color: var(--cor02);
     width: 120px;
     padding: 10px;
@@ -125,9 +125,9 @@ main{
     color: black;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.626);
 }
-.sobre-mim h4:hover{
-    color: white;
-    text-decoration: underline;
+#sobre-mim h4:hover{
+    color: var(--cor00);
+    background-color: var(--cor03);
 }
 
 
@@ -159,8 +159,6 @@ main{
 #projetos a {
     text-decoration: none;
     text-align: center;
-    
-    
 }
 #projetos p{
     background-color: var(--cor03);
@@ -174,9 +172,56 @@ main{
     font-family: var(--fonte1);
     font-size: 1.5em;
 }
+#projetos p:hover{
+    background-color: var(--cor04);
+}
+#contatos{
+    background-color: var(--cor01);
+    margin-top: 20px;
+    padding-bottom: 30px;
+    border: 1px solid black;
+}
+#contatos a {
+    text-decoration: none;
+     /* Cor do texto */
+    display: flex;
+    
+}
+
+#contatos a img {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+.redes a,.links a{
+    color: black;
+    margin: 2px 10px;
+    font-weight: bold;
+    
+}
+.redes a:hover{
+    color: var(--cor00);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.825);
+}
+.links a:hover{
+    color: var(--cor00);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.825);
+    transform: translate(2px,-1px);
+    transition: 0.15s linear;
+    
+}
+.links h2,.redes h2{
+    
+    margin:10px 10px;
+    
+    font-size:1.7em;
+}
+.links h2{
+    margin-top: 50px;
+}
+
 #final{
     background-color: var(--cor04);
-    margin-top: 20px;
+    
     padding: 8px;
     text-align: center;
     color: white;

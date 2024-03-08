@@ -12,10 +12,10 @@
        <header>
         <h2>Portifó<span>lio</span></h2>
         <menu>
-            <ul class="cabeçalho">
-                <li><a href="#">inicio</a></li>
-                <li><a href="#">meus Projetos</a><li>
-                <li><a href="#">contato</a></li>
+            <ul id="cabeçalho">
+                <li><a href="#cabeçalho">inicio</a></li>
+                <li><a href="#projetos">meus Projetos</a><li>
+                <li><a href="#contatos">contato</a></li>
             </ul><!--Cabeçalho-->
         </menu>
         </header>
@@ -26,7 +26,7 @@
                 <img src="imagens/eu.jpg" alt="">
                  <!--minha foto e meu nome-->
            
-            <article class="sobre-mim">
+            <article id="sobre-mim">
                 <h1>Sobre Mim</h1>    
                 <p>Olá,meu nome é Guilherme Barroso. Com 18 anos de idade, sou um desenvolvedor web determinado a explorar e criar soluções inovadoras, e aprender cada vez mais com profissionais da área. Dê uma olhada nos meus projetos logo a seguir.</p>
                 <a href=""><h4>Meu Currículo</h4></a>
@@ -39,10 +39,27 @@
                 <p>Acesse aqui</p>
             </a>
         </section>
-        <footer id="contato">
-            
+        <footer id="contatos">
+            <div class="redes">
+                <h2>Entre em Contato</h2>
+                <a href="https://www.instagram.com/seuusuario/" target="_blank" rel="external">
+                    <img src="imagens/icons/instagram.png" alt="Instagram" width="22" height="22">
+                    Meu Instagram
+                </a>
+                <a href="mailto:Guilhermebarroso166@gmail.com" target="_blank" rel="external">
+                    <img src="imagens/icons/gmail.png" alt="Gmail" width="22" height="22">
+                    Guilhermebarroso166@gmail.com
+                </a>
+            </div>
+            <div class="links">
+                <h2>Links rápidos</h2>
+                <a href="#cabeçalho">Ínicio</a>
+                <a href="#sobre-mim">Sobre mim</a>
+                <a href="#projetos">Meus Projetos</a>
+            </div>
         </footer>
        </main>
+       
        <footer id="final">
         <p>Criado por Guilherme Barroso</p>
        </footer>
