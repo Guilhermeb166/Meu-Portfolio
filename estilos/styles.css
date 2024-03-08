@@ -32,7 +32,7 @@ header h2{
     color: var(--cor00);
     font-size: 2em;
     text-align: center;
-    cursor: pointer;/*muda o cursos*/
+    cursor: pointer;/*muda o cursor*/
     letter-spacing: 1px;/*espaçamento entre letras*/
     margin-bottom: 20px;
 }
@@ -173,4 +173,13 @@ main{
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.764);
     font-family: var(--fonte1);
     font-size: 1.5em;
+}
+#final{
+    background-color: var(--cor04);
+    margin-top: 20px;
+    padding: 8px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black;
 }
