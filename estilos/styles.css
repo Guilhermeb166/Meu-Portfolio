@@ -30,7 +30,7 @@ body,html{
 }
 header h2{
     color: var(--cor00);
-    font-size: 2em;
+    font-size: 2.4em;
     text-align: center;
     cursor: pointer;/*muda o cursor*/
     letter-spacing: 1px;/*espaçamento entre letras*/
@@ -51,7 +51,7 @@ menu a{
     display: block;
     box-sizing: border-box;
     margin-top: 5px;
-    padding: 6px;
+    padding: 3px;
     text-transform: capitalize;/* Transforma a primeira letra de cada palavra para maiúscula */
 }
 menu a:hover{
@@ -109,6 +109,7 @@ main{
     margin: 15px 10px 55px 5px;
     text-indent: 10px;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.337);
+    line-height: 1.2;
 }
 #sobre-mim a{
     text-decoration: none;
@@ -150,7 +151,10 @@ main{
 #projetos iframe{
     display: block;
     margin: auto;
-    width: 80%;
+    width: 60%;
+    border: 1px solid rgba(0, 0, 0, 0.166);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.526);
+    height: 220px;
     height: 250px;
     background:url(../imagens/siteveiculos.jpg)no-repeat  top center;
     background-size: cover;
@@ -163,7 +167,7 @@ main{
 #projetos p{
     background-color: var(--cor03);
     color: var(--cor00);
-    width: 70%;
+    width: 60%;
     margin: auto;
     margin-top: 12px;
     border-radius: 10px;
@@ -179,7 +183,7 @@ main{
     background-color: var(--cor01);
     margin-top: 20px;
     padding-bottom: 30px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.293);
 }
 #contatos a {
     text-decoration: none;
