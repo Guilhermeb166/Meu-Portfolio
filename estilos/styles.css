@@ -1,9 +1,10 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*^Versão Mobile*/
 *{
     margin: 0px;
     padding: 0px;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 :root{
     --fundo:#E5E4E4;
@@ -13,7 +14,6 @@
     --cor03:#21549D;
     --cor04:#1b3f84;
     --fonte1:"Bebas Neue", sans-serif;
-    
 }
 body,html{
     background-color: var(--fundo);
@@ -23,9 +23,7 @@ body,html{
     background-size: cover;
     background: url(../imagens/background.jpg) no-repeat center;
     align-items: center;
-    padding:20px 0px 0px;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding:20px 3%;
     margin-bottom: 50px;
 }
 header h2{
@@ -39,33 +37,29 @@ header h2{
 span{
     color: var(--cor03);
 }
-menu li{
+nav li{
     display: inline-block;
     list-style-type:none ; /* Remove o marcador de lista padrão */
     padding: 10px 5px;
 } 
-menu a{
+nav a{
     color: var(--cor00);
     text-decoration: none;
     font-weight: bold;
     display: block;
     box-sizing: border-box;
     margin-top: 5px;
-    padding: 3px;
-    text-transform: capitalize;/* Transforma a primeira letra de cada palavra para maiúscula */
+    padding: 5px;
 }
-menu a:hover{
+nav a:hover{
     background-color: var(--cor04);
     border-radius: 30px;
     transform: scale(1.2);
     transition:  0.3s;
-    
 }
 main{
     width: 100%;
 }
-
-
 #eu{
     width: 100%;
     display: flex;
@@ -79,7 +73,6 @@ main{
     width: 45%;
     font-size: 35px;
     text-align: left;
-    
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.262);
 }
 #eu img{
@@ -94,7 +87,6 @@ main{
     width: 100%;
     padding-top: 75px;
     border-radius: 10px;
-   
 }
 #sobre-mim h1{
     background-image: linear-gradient(to right, var(--cor03),var(--cor00));
@@ -115,7 +107,6 @@ main{
     text-decoration: none;
     text-align: center;
     margin: 10px;
-    
 }
 #sobre-mim h4{
     background-color: var(--cor02);
@@ -130,35 +121,28 @@ main{
     color: var(--cor00);
     background-color: var(--cor03);
 }
-
-
 #projetos{
    /* border: 1px solid black;*/
     width: 100;
     padding-top: 100px;
 }
 #projetos h1{ 
-    
-    margin:-95px 0px 50px;
+    margin:-95px 0px 20px;
     background-image: linear-gradient(to right, var(--cor03),var(--cor00));
     font-size: 2em;
     padding: 8px;
     color: white;
     text-shadow:  1px 1px 1px black;
-    
-
 }
 #projetos iframe{
     display: block;
     margin: auto;
-    width: 60%;
+    width: 320px;
     border: 1px solid rgba(0, 0, 0, 0.166);
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.526);
-    height: 220px;
-    height: 250px;
-    background:url(../imagens/siteveiculos.jpg)no-repeat  top center;
+    height: 350px;
     background-size: cover;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 #projetos a {
     text-decoration: none;
@@ -167,9 +151,9 @@ main{
 #projetos p{
     background-color: var(--cor03);
     color: var(--cor00);
-    width: 60%;
+    width: 230px;
     margin: auto;
-    margin-top: 12px;
+    margin-top: 15px;
     border-radius: 10px;
     padding: 4px 0px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.764);
@@ -179,56 +163,54 @@ main{
 #projetos p:hover{
     background-color: var(--cor04);
 }
+#projetos h3{
+    text-align: center;
+    margin: 50px 0px 20px;
+    font-size: 2.2em;
+    color: #000;
+}
+#veiculos{
+    background:url(../imagens/siteveiculos.jpg)no-repeat  top center;
+}
+#login{
+    background: url(../imagens/tela-login.jpg) no-repeat;
+    background-position:top center ;
+}
 #contatos{
     background-color: var(--cor01);
-    margin-top: 20px;
-    padding-bottom: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.293);
+    margin-top: 25px;
+    padding-bottom: 80px;
+    border: 1px solid rgba(0, 0, 0, 0.182);
+    display: flex;
+    justify-content: space-around;
 }
 #contatos a {
     text-decoration: none;
      /* Cor do texto */
     display: flex;
-    
 }
-
 #contatos a img {
     margin-right: 5px; /* Espaçamento entre o ícone e o texto */
 }
-
 .redes a,.links a{
     color: black;
     margin: 2px 10px;
-    font-weight: bold;
-    
+ 
 }
-.redes a:hover{
-    color: var(--cor00);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.825);
-}
-.links a:hover{
+.links a:hover,.redes a:hover,img:hover{
     color: var(--cor00);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.825);
     transform: translate(2px,-1px);
     transition: 0.15s linear;
-    
 }
 .links h2,.redes h2{
-    
-    margin:10px 10px;
-    
-    font-size:1.7em;
+    margin:12px 10px;
+    font-size:1.em;
 }
-.links h2{
-    margin-top: 50px;
-}
-
 #final{
     background-color: var(--cor04);
-    
     padding: 8px;
     text-align: center;
     color: white;
-    font-weight: bold;
     text-shadow: 1px 1px 3px black;
 }
