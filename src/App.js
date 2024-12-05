@@ -9,11 +9,17 @@ import { useState } from 'react';
 function App() {
   const [startTransition, setStartTransition] = useState(false);
   //startTransition: Estado booleano inicializado como false. Controla quando a transição entre as telas deve ocorrer.
+  const [isHomeReady, setIsHomeReady] = useState(false); // Controla se o Home está pronto
 
   const handleShowPortfolio = () => {
     setStartTransition(true); // Inicia a transição
   };
 
+
+  const handleHomeLoaded = () => {
+    // Indica que o componente Home está pronto
+    setIsHomeReady(true);
+  };
   
   return (
     <div className="App">
