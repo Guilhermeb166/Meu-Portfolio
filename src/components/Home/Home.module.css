@@ -1,7 +1,7 @@
 .home{
-    background: url('../../../public/img/backgroundHome.jpg') no-repeat center;
+    background: url('../../../public/img/fundoDev.jpg') no-repeat center;
     background-size: cover;
     height: 100vh;
     image-rendering: pixelated;/*dimensionar a imagem sem perder a qualidade*/
-  
+    
 }
