@@ -3,6 +3,7 @@ import { ReactTyped } from 'react-typed';
 import Aos from 'aos';
 import 'aos/dist/aos.css'; //CSS do AOS
 import styles from './Welcome.module.css'
+import ParticleBackground from '../Particle/ParticleBackground';
 import { useEffect, useState } from 'react';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 export default function Welcome({onClick}){
@@ -45,15 +46,17 @@ export default function Welcome({onClick}){
                 </div>
             ):(
                 <div className={styles.welcome}>
-                        <div data-aos="fade-down">
+                    <ParticleBackground />
+                        <div style={{zIndex:2}}>
                             <img src="./img/devImg.svg" alt="dev imagem" className={styles.devImg}/>
-                            <p className={styles.text}>Bem vindo! <p>meu nome é Guilherme Barroso e eu sou </p></p>
+                            <p className={styles.text}>Bem vindo ao meu portfólio !</p>
                             <ReactTyped
-                                strings={['Desenvolvedor Web']}
+                                strings={['Descubra mais clicando logo abaixo ']}
                                 typeSpeed={50}
                                 backSpeed={30}
                                 loop={false}
                                 className={styles.textAnimation}
+                                showCursor={false} 
                             />
                         </div>
                         <RiArrowDownDoubleLine className={styles.ShowPortfolio} onClick={onClick}/>

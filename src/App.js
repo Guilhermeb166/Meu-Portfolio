@@ -25,23 +25,23 @@ function App() {
     <div className="App">
     {/* Tela de Bem-vindo */}
     <motion.div
-      initial={{ y: 0 }} 
-      animate={startTransition ? { y: "-100%" } : { y: 0 }} 
-      transition={{ duration: 1 }}
+      initial={{ y: 0, opacity: 1 }} // fica vísivel até aparecer o component home
+      animate={startTransition && isHomeReady ? { y: "-100%" } : { y: 0 }}
+      transition={{ duration: 1.5 }}
       style={{
-        position: "absolute",
-        width: "100%",
-        height: "100%",
+          position: "absolute",
+          width: "100%",
+          height: "100%",
       }}
     >
-      <Welcome onClick={handleShowPortfolio}/>
+      <Welcome onClick={handleShowPortfolio} />
     </motion.div>
     {/* Tela do Projeto */}
     {startTransition && (
         <motion.div
           initial={{ y: "100%" }} 
-          animate={{ y: 0 }} 
-          transition={{ duration: 1 }} 
+          animate={isHomeReady ? { y: 0 } : { y: "100%" }}
+          transition={{ duration: 1.5 }} 
           style={{
             position: "absolute",
             width: "100%",
@@ -51,7 +51,7 @@ function App() {
           <Router>
             <Header />
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home onLoad={handleHomeLoaded}/>} />
             </Routes>
           </Router>
         </motion.div>
