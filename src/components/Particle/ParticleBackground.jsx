@@ -38,14 +38,14 @@ export default function ParticleBackground() {
           },
           move: {
             enable: true,
-            speed: 2, // Velocidade de movimento
+            speed: 3, // Velocidade de movimento
             direction: "none",
             outModes: {
               default: "out", // Partículas saem da tela e reaparecem
             },
           },
           opacity: {
-            value: 0.5, // Opacidade das partículas
+            value: 0.2, // Opacidade das partículas
           },
           size: {
             value: 5, // Tamanho das partículas

@@ -47,7 +47,7 @@ export default function Welcome({onClick}){
             ):(
                 <div className={styles.welcome}>
                     <ParticleBackground />
-                        <div style={{zIndex:2}}>
+                        <div style={{zIndex:10}}>
                             <img src="./img/devImg.svg" alt="dev imagem" className={styles.devImg}/>
                             <p className={styles.text}>Bem vindo ao meu portfólio !</p>
                             <ReactTyped

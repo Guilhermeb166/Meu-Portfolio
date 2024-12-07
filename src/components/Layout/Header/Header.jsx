@@ -2,7 +2,7 @@ import styles from './Header.module.css'
 import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css'; //CSS do AOS
-import { Link } from 'react-router-dom';
+
 export default function Header(){
     useEffect(() => {
         Aos.init({
@@ -10,13 +10,20 @@ export default function Header(){
             once: true,     // Anima apenas uma vez (opcional)
         });
     }, []); // O array vazio garante que isso seja executado apenas uma vez
+
+    const scrollToSection=((id)=>{
+        const element = document.getElementById(id)
+        if(element){
+            element.scrollIntoView({behavior:'smooth'})
+        }
+    })
     return(
         <header className={styles.header}>
             <img src="./img/gb.png" alt="gb.png" className={styles.logo} />
             <div className={styles.links} >
-                <Link to='/'>Home</Link>
-                <Link to='/'>Sobre Mim</Link>
-                <Link to='/'>Projetos</Link>
+            <a href='#home' onClick={() => scrollToSection('home')}>Home</a>
+            <a href='#aboutMe' onClick={() => scrollToSection('aboutMe')}>Sobre Mim</a>
+            <a href='/'>Projetos</a>
 
             </div>
         </header>
