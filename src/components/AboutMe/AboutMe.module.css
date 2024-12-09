@@ -1,5 +1,7 @@
 .AboutMe{
     display: flex;
-    height: 500px;
+    height: 100vh;
+    background:linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.178), rgba(7, 7, 7, 0)), url('../../../public/img/backgroundDarkBlue.jpg') no-repeat center;
+    background-size: cover;
     background-color: #fff;
 }
