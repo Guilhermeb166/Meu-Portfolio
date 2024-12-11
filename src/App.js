@@ -5,6 +5,7 @@ import { motion } from "motion/react"
 import Welcome from './components/Welcome/Welcome';
 import { useState } from 'react';
 import AboutMe from './components/AboutMe/AboutMe';
+import Projects from './components/Projects/Projects';
 
 function App() {
   const [startTransition, setStartTransition] = useState(false);
@@ -52,6 +53,7 @@ function App() {
           <main>
             <Home onLoad={handleHomeLoaded} />
             <AboutMe />
+            <Projects/>
           </main>
         </motion.div>
       )}

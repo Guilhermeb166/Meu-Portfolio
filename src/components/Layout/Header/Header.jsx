@@ -23,7 +23,7 @@ export default function Header(){
             <div className={styles.links} >
             <a href='#home' onClick={() => scrollToSection('home')}>Home</a>
             <a href='#aboutMe' onClick={() => scrollToSection('aboutMe')}>Sobre Mim</a>
-            <a href='/'>Projetos</a>
+            <a href='#projects' onClick={() => scrollToSection('projects')}>Projetos</a>
 
             </div>
         </header>

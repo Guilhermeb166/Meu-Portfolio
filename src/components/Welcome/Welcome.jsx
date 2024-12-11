@@ -1,7 +1,6 @@
 import { RiArrowDownDoubleLine } from 'react-icons/ri'
 import { ReactTyped } from 'react-typed';
-import Aos from 'aos';
-import 'aos/dist/aos.css'; //CSS do AOS
+
 import styles from './Welcome.module.css'
 import ParticleBackground from '../Particle/ParticleBackground';
 import { useEffect, useState } from 'react';
@@ -9,10 +8,7 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 export default function Welcome({onClick}){
     const [loading,setLoading] = useState(true) //estado de loading
     useEffect(() => {
-        Aos.init({
-            duration: 1000, // Tempo de duração da animação (opcional)
-            once: true,     // Anima apenas uma vez (opcional)
-        });
+        
         // Lista de imagens que você quer precarregar
         const imagesToLoad = [
             '/img/devImg.svg',
