@@ -1,3 +1,5 @@
 .Projects{
+    background:linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.178), rgba(7, 7, 7, 0),rgba(7, 7, 7, 0)),linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0),rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.236),rgb(0, 0, 0)), url('../../../public/img/fundoProjects.jpg') no-repeat center;
+    background-size: cover;
     height: 100vh;
 }
