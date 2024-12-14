@@ -12,18 +12,35 @@ export default function Header(){
     }, []); // O array vazio garante que isso seja executado apenas uma vez
 
     const scrollToSection=((id)=>{
+       
         const element = document.getElementById(id)
         if(element){
-            element.scrollIntoView({behavior:'smooth'})
+            element.scrollIntoView({ behavior: 'smooth'});
         }
     })
     return(
         <header className={styles.header}>
             <img src="./img/gb.png" alt="gb.png" className={styles.logo} />
             <div className={styles.links} >
-            <a href='#home' onClick={() => scrollToSection('home')}>Home</a>
-            <a href='#aboutMe' onClick={() => scrollToSection('aboutMe')}>Sobre Mim</a>
-            <a href='#projects' onClick={() => scrollToSection('projects')}>Projetos</a>
+                <span
+                    role="button"
+                    onClick={() => scrollToSection('home')}
+                >
+                    Home
+                </span>
+                <span
+                    role="button"
+                    onClick={() => scrollToSection('aboutMe')}
+                >
+                    Sobre Mim
+                </span>
+                <span
+                    role="button"
+                    onClick={() => scrollToSection('projects')}
+                    
+                >
+                    Projetos
+                </span>
 
             </div>
         </header>

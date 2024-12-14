@@ -1,0 +1,80 @@
+.project{
+    position: relative;
+    overflow: hidden;
+    width: 480px;
+    
+    
+    text-align: center;
+    
+}
+.name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: var(--fontPopins);
+    color: #fff;
+}
+.imageWrapper{
+    position: relative;
+    border-radius: 5px;
+    .image{
+        width: 100%;
+        display: block;
+        transition: transform 0.3s ease;
+        border-radius: 5px;
+        object-fit: cover;
+        height: auto;
+        image-rendering: auto;
+    }
+
+    &:hover .overlay{
+        height: 100%;
+    }
+}
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.908);
+    overflow: hidden;
+    transition: height 0.5s ease;
+    user-select: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding:0px 5px ;
+    
+}
+.projectDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    gap: 15px;
+    line-height: 1.3;
+}
+.description,.skills{
+    text-align: justify;
+    font-family: var(--fontPopins);
+}
+.url{
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    padding: 2px 1px;
+    width: 90%;
+    max-width: 200px;
+    background-color: #001985;
+    &>a{
+        text-decoration: none;
+        color: #fff;
+    }
+    &:hover{
+        background-color: #021258;
+    }
+}

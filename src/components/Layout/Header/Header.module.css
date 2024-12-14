@@ -22,11 +22,12 @@
     justify-content: space-around;
     width: 400px;
 
-    &>a{
+    &>span{
         color: #fff;
         text-decoration: none;
         font-family: "Encode Sans", sans-serif;
         position: relative;
+        cursor: pointer;
         &::after{
             content: '';
             height: 2px;

@@ -6,6 +6,7 @@ import Welcome from './components/Welcome/Welcome';
 import { useState } from 'react';
 import AboutMe from './components/AboutMe/AboutMe';
 import Projects from './components/Projects/Projects';
+import Footer from './components/Layout/Footer/Footer';
 
 function App() {
   const [startTransition, setStartTransition] = useState(false);
@@ -55,6 +56,7 @@ function App() {
             <AboutMe />
             <Projects/>
           </main>
+          <Footer/>
         </motion.div>
       )}
     
