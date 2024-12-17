@@ -1,0 +1,91 @@
+.footer{
+    font-family: var(--fontPopins);
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    height: 350px;
+    padding:20px 0 50px;
+}
+.emailContainer{
+    display: flex;
+    flex-direction: column;
+    &>form{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .input{
+            outline: none;
+            border: 0;
+            border-radius: 5px;
+            padding: 5px;
+          
+        }
+
+        &>button{
+            background-color: #97D5EF;
+            border: 0;
+            border-radius: 5px;
+            height: 26px;
+            cursor: pointer;
+            font-weight: 700;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 200px;
+            transition: all .3s ease;
+
+            &:hover{
+                background-color: #5291ac;
+                color: #fff;
+            }
+        }
+    }
+}
+.email{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.inputEmail{
+    height: 30px;
+    width: 100%;
+}
+.message{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    &>span{
+        position: absolute;
+        color: #666;
+        bottom: 0;
+        right: 5px;
+        font-size: 10px;
+    }
+}
+.inputMessage{
+    resize: none;/* Evita que o usuário redimensione manualmente */
+    width: 100%; 
+    height: 100%;
+}
+.socialMedia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 50%;
+    max-width: 400px;
+    &>div{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+.icons{
+    font-size: 3.8em;
+    transition: all .4s ease;
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.2);
+        color: #97D5EF;
+    }
+}
