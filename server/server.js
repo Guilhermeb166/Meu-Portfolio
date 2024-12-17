@@ -5,7 +5,7 @@ const cors = require('cors');
 require('dotenv').config({ path: '.env' });
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -18,8 +18,7 @@ const transporter = nodemailer.createTransport({
       pass: process.env.EMAIL_PASS
     }
   });
-  console.log('EMAIL_USER:', process.env.EMAIL_USER);
-console.log('EMAIL_PASS:', process.env.EMAIL_PASS);
+
 
 app.post('/send-email', (req, res) => {
   const { email, message } = req.body;
@@ -40,6 +39,10 @@ app.post('/send-email', (req, res) => {
       res.status(200).send('E-mail enviado com sucesso!');
     }
   });
+});
+
+app.get("/", (req, res) => {
+  res.send("Backend funcionando na Vercel!");
 });
 
 app.listen(PORT, () => {
