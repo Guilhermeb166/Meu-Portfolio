@@ -59,4 +59,37 @@
 .curriculumBtn.animate {
     opacity: 1;
     transform: translateX(0); /* Volta para o centro */
-  }
+}
+
+/*Versão para dispositivos móveis*/
+@media screen and (max-width: 481px){
+    .home{
+        background:linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(0, 0, 0, 0.236),rgb(0, 0, 0)), url('../../../public/img/fundoDevMobile.jpg') no-repeat center;
+        background-size: cover;
+        padding: 100px 0;
+    }
+    .name{
+        font-size: 2rem;
+       
+    }
+    .lastName{
+        font-size: 2.5rem;
+        line-height: 50px;
+        color: #FD6C4C;
+    }
+    .curriculumBtn{
+        padding:14px 7px;
+        font-size: 1.2rem;
+        width: 90%;
+        max-width: 210px;
+
+        &:hover{
+            background-color: #1A2A3D;
+            transition: none;
+        }
+
+        &:active{
+            background-color: #02030C;
+        }
+    }
+}

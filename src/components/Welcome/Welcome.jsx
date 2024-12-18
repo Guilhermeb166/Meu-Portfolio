@@ -13,7 +13,8 @@ export default function Welcome({onClick}){
         const imagesToLoad = [
             '/img/devImg.svg',
             '/img/fundoDev.jpg',
-            '/img/backgroundHome.jpg'
+            '/img/backgroundHome.jpg',
+            '/img/fundoDevMobile.jpg'
         ];
         const preloadImages = (images) =>{
             let loadedImages = 0 //Essa variável será usada para contar quantas imagens foram carregadas com sucesso.

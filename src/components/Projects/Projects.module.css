@@ -22,3 +22,15 @@
     justify-content: center;
     gap: 40px;
 }
+@media screen and (max-width: 481px){
+    .projectsContainer{
+        padding: 70px 0;
+
+        &>h1{
+            margin-bottom: 40px;
+        }
+    }
+    .projects{
+        width: 95%;
+    }
+}

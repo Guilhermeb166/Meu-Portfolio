@@ -89,3 +89,39 @@
         color: #97D5EF;
     }
 }
+@media screen and (max-width: 481px){
+    .footer{
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        padding:20px 0 20px;
+    }
+    .emailContainer,.socialMedia{
+        width: 100%;
+        text-align: center;
+    }
+    .emailContainer{
+        &>form{
+            align-items: center;
+        }
+    }
+    .email{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+    }
+    .inputEmail{
+        height: 30px;
+        width: 80%;
+    }
+    .message{
+        width: 80%;
+        &>span{
+            font-size: 12px;
+        }
+    }
+
+}

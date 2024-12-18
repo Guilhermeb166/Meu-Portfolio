@@ -104,3 +104,61 @@
         color: #F15538;
     }
 }
+@media screen and (max-width: 481px){
+    .AboutMe{
+        height: 120vh;
+        gap: 30px;
+        padding-top: 0px;
+        overflow: hidden;
+        
+        
+    }
+    .text{
+        font-family: var(--fontPopins);
+        color: #fff;
+        text-align: justify;
+        text-align-last:left;
+        hyphens: auto;
+        line-height: 25px;
+        letter-spacing: 1.2px;
+        font-size: 1.1rem;
+    }
+    .skillsIcon{
+        cursor: pointer;
+        font-size: 45px;
+        transition: all .3s ease;
+        &:hover{
+            transform: scale(1);
+        }
+    }
+    .reactIcon{
+        color: #58D0EE;
+    }
+    .cssIcon{
+        color: #2D53E5;
+    }
+    .htmlIcon{
+        color: #FC4F13;
+    }
+    .jsIcon{
+        color: #F7E025;
+    }
+    .nodeIcon{
+        color: #8FC708;
+    }
+    .twIcon{
+        color: #3EBFF8;
+    }
+    .sqlIcon{
+        color: #08628E;
+    }
+    .axiosIcon{
+        color: #5F30E5;
+    }
+    .sassIcon{
+        color: #CF6C9C;
+    }
+    .gitIcon{
+        color: #F15538;
+    }
+}
