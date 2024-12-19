@@ -29,7 +29,7 @@ function App() {
     <motion.div
       initial={{ y: 0, opacity: 1 }} // fica vísivel até aparecer o component home
       animate={startTransition && isHomeReady ? { y: "-100%" } : { y: 0 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 1.5 }}
       style={{
           position: "absolute",
           width: "100%",
@@ -43,7 +43,7 @@ function App() {
         <motion.div
           initial={{ y: "100%" }} 
           animate={isHomeReady ? { y: 0 } : { y: "100%" }}
-          transition={{ duration: 2 }} 
+          transition={{ duration: 1.5 }} 
           style={{
             position: "absolute",
             width: "100%",
