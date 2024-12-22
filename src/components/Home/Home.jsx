@@ -32,15 +32,35 @@ export default function Home({onLoad}){
     };
   }, []);
 
-    useEffect(() => {
-        // Simula carregamento e avisa quando está pronto
-        const timer = setTimeout(() => {// usada para executar algo uma única vez após um tempo determinado.
-          if (onLoad) onLoad();//a verifica se a função onLoad foi passada como uma prop para o componente.
-        },100);
-    
-        return () => clearTimeout(timer);
-        //Cancela o temporizador criado pelo setTimeout, garantindo que ele não execute o código após o componente ser desmontado.
-      }, [onLoad]);//O efeito só será executado novamente se a prop onLoad mudar.
+  useEffect(() => {
+    const imagesToLoad = ["/img/fundoDev.jpg", "/img/fundoDevMobile.jpg"];
+
+    const preloadImages = (images, callback) => {
+      let loadedImages = 0;
+      images.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+          loadedImages++;
+          if (loadedImages === images.length) {
+            callback(); // Chama o callback após carregar todas as imagens
+          }
+        };
+        img.onerror = () => {
+          console.warn(`Erro ao carregar imagem: ${src}`);
+          loadedImages++;
+          if (loadedImages === images.length) {
+            callback(); // Continua mesmo se houver erro
+          }
+        };
+      });
+    };
+
+    // Precarregar imagens e notificar o App
+    preloadImages(imagesToLoad, () => {
+      if (onLoad) onLoad(); // Notifica que o componente está pronto
+    });
+  }, [onLoad]);
 
     return(
         <section className={styles.home} id="home">
