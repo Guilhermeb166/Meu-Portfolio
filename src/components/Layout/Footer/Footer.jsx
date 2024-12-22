@@ -77,9 +77,15 @@ export default function Footer(){
             <div className={styles.socialMedia}>
                 <h1>Mídias Sociais</h1>
                 <div>
-                <FiInstagram className={`${styles.icons} ${styles.insta}`}/>
-                <CiLinkedin className={`${styles.icons} ${styles.linkedin}`}/>
-                <FaGithub className={`${styles.icons} ${styles.github}`}/>
+                <a href="https://www.instagram.com/gui166_/profilecard/?igsh=OTM3ZzdmNmtkZjNx" target="blank" rel="external">
+                    <FiInstagram className={`${styles.icons} ${styles.insta}`}/>
+                </a>
+                <a href="https://www.linkedin.com/in/guilherme-barroso-98773b269/" target="blank" rel="external">
+                    <CiLinkedin className={`${styles.icons} ${styles.linkedin}`}/>
+                </a>
+                <a href="https://github.com/Guilhermeb166" target="blank" rel="external">
+                    <FaGithub className={`${styles.icons} ${styles.github}`}/>
+                </a>
                 </div>
             </div>
         </footer>

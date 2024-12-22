@@ -83,6 +83,7 @@
     font-size: 3.8em;
     transition: all .4s ease;
     cursor: pointer;
+    color: #fff;
 
     &:hover{
         transform: scale(1.2);
