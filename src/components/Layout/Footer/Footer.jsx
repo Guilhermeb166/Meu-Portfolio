@@ -61,7 +61,7 @@ export default function Footer(){
                         <textarea
                             id='message'
                             className={`${styles.input} ${styles.inputMessage}`}
-                            maxlength="250"
+                            maxLength="250"
                             value={message}
                             onChange={(e)=>{
                                 setMessage(e.target.value)

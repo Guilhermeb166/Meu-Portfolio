@@ -1,5 +1,4 @@
 .home{
-    background:linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(0, 0, 0, 0.236),rgb(0, 0, 0)), url('../../../public/img/fundoDev.jpg') no-repeat center;
     background-size: cover;
     height: 100vh;
     image-rendering: pixelated;/*dimensionar a imagem sem perder a qualidade*/
@@ -64,7 +63,6 @@
 /*Versão para dispositivos móveis*/
 @media screen and (max-width: 481px){
     .home{
-        background:linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(0, 0, 0, 0.236),rgb(0, 0, 0)), url('../../../public/img/fundoDevMobile.jpg') no-repeat center;
         background-size: cover;
         padding: 100px 0;
     }

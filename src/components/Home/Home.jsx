@@ -1,9 +1,10 @@
-import { useEffect,useRef } from 'react';
+import { useEffect,useRef, useState } from 'react';
 import styles from './Home.module.css'
 export default function Home({onLoad}){
-    
   const divRef = useRef();
   const buttonRef = useRef();
+  const [background, setBackground] = useState(''); // Estado para controlar o background
+  
 
   useEffect(() => {
     const observer = new IntersectionObserver //Cria um observador que monitora quando elementos entram ou saem da área visível (viewport) do navegador.
@@ -33,37 +34,49 @@ export default function Home({onLoad}){
   }, []);
 
   useEffect(() => {
-    const imagesToLoad = ["/img/fundoDev.jpg", "/img/fundoDevMobile.jpg"];
-
-    const preloadImages = (images, callback) => {
-      let loadedImages = 0;
-      images.forEach((src) => {
-        const img = new Image();
-        img.src = src;
-        img.onload = () => {
-          loadedImages++;
-          if (loadedImages === images.length) {
-            callback(); // Chama o callback após carregar todas as imagens
-          }
-        };
-        img.onerror = () => {
-          console.warn(`Erro ao carregar imagem: ${src}`);
-          loadedImages++;
-          if (loadedImages === images.length) {
-            callback(); // Continua mesmo se houver erro
-          }
-        };
-      });
+    const handleResize = () => {
+      if (window.innerWidth <= 481) {
+        // Troca o fundo para mobile
+        setBackground(`
+          linear-gradient(
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1),
+            rgba(0, 0, 0, 0.526),
+            rgb(0, 0, 0)
+          ),
+          url('/img/fundoDevMobile.jpg') no-repeat center center / cover
+        `);
+      } else {
+        // Retorna ao fundo padrão
+        setBackground(`
+          linear-gradient(
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1),
+            rgba(0, 0, 0, 0.526),
+            rgb(0, 0, 0)
+          ),
+          url('/img/fundoDev.jpg') no-repeat center center / cover
+        `);
+      }
     };
 
-    // Precarregar imagens e notificar o App
-    preloadImages(imagesToLoad, () => {
-      if (onLoad) onLoad(); // Notifica que o componente está pronto
-    });
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Chama o onLoad quando o componente estiver pronto
+    if (onLoad) {
+      onLoad();
+    }
   }, [onLoad]);
 
     return(
-        <section className={styles.home} id="home">
+        <section className={styles.home} id="home"   style={{ background }}>
           <div ref={divRef}  className={styles.content}>
             <h1 className={styles.name}>Guilherme Barroso</h1>
             <h1 className={styles.lastName}>Desenvolvedor Web</h1>

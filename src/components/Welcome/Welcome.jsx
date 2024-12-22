@@ -8,42 +8,41 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 export default function Welcome({onClick}){
     const [loading,setLoading] = useState(true) //estado de loading
 
-    // Lista de imagens que você quer precarregar
-    const imagesToLoad = [
-        '/img/devImg.svg',
-        '/img/fundoDev.jpg',
-        '/img/backgroundHome.jpg',
-        '/img/fundoDevMobile.jpg'
-    ];
     
-    useEffect(() => {
-        
-        const preloadImages = (images) => {
+    // Lista de imagens a serem precarregadas
+    const imagesToLoad = [
+      '/img/devImg.svg',
+      '/img/fundoDev.jpg',
+      '/img/backgroundHome.jpg',
+      '/img/fundoDevMobile.jpg',
+  ];
+
+  useEffect(() => {
+      const preloadImages = (images) => {
           let loadedImages = 0; // Contador interno
           images.forEach((src) => {
-            const img = new Image();
-            img.src = src;
-            img.onload = () => {
-              loadedImages++;
-              if (loadedImages === images.length) {
-                setLoading(false); // Sai do estado de loading quando todas as imagens carregarem
-              }
-            };
-            img.onerror = () => {
-              console.warn(`Erro ao carregar imagem: ${src}`);
-              loadedImages++;
-              if (loadedImages === images.length) {
-                setLoading(false); // Sai do estado de loading quando todas as imagens tentarem carregar
-              }
-            };
+              const img = new Image();
+              img.src = src;
+              img.onload = () => {
+                  loadedImages++;
+                  if (loadedImages === images.length) {
+                      setLoading(false); // Sai do estado de loading quando todas as imagens carregarem
+                  }
+              };
+              img.onerror = () => {
+                  console.warn(`Erro ao carregar imagem: ${src}`);
+                  loadedImages++;
+                  if (loadedImages === images.length) {
+                      setLoading(false); // Sai do estado de loading mesmo com erro
+                  }
+              };
           });
-        };
-    
-        preloadImages(imagesToLoad); // Precarrega todas as imagens
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-      }, []); // Executa apenas uma vez ao montar o componente
-    
+      };
 
+      preloadImages(imagesToLoad); // Precarrega todas as imagens
+      // eslint-disable-next-line
+  }, []); // Executa apenas uma vez ao montar o componente
+    
     return(
         <div>
             {loading?(
