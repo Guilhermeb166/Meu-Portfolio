@@ -56,20 +56,23 @@ export default function Footer(){
                             autoComplete='off'
                         />
                     </div>
+                    <label htmlFor="message">Digite sua mensagem:</label>
                     <div className={styles.message}>
                         <label htmlFor="message">Digite sua mensagem:</label>
-                        <textarea
-                            id='message'
-                            className={`${styles.input} ${styles.inputMessage}`}
-                            maxLength="250"
-                            value={message}
-                            onChange={(e)=>{
-                                setMessage(e.target.value)
-                                handleChange(e)
-                            }}
-                        
-                        />
-                        <span>{charAmout}/250</span>
+                        <div>
+                            <textarea
+                                id='message'
+                                className={`${styles.input} ${styles.inputMessage}`}
+                                maxLength="250"
+                                value={message}
+                                onChange={(e)=>{
+                                    setMessage(e.target.value)
+                                    handleChange(e)
+                                }}
+                            
+                            />
+                            <span>{charAmout}/250</span>
+                        </div>
                     </div>
                     <button type='submit'>Enviar</button>
                 </form>
