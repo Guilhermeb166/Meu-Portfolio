@@ -57,7 +57,7 @@ export default function Footer(){
                         />
                     </div>
                     <div className={styles.message}>
-                        <label htmlFor="email">Digite sua mensagem:</label>
+                        <label htmlFor="message">Digite sua mensagem:</label>
                         <textarea
                             id='message'
                             className={`${styles.input} ${styles.inputMessage}`}
