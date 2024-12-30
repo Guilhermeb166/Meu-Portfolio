@@ -3,8 +3,8 @@
     color: #fff;
     display: flex;
     justify-content: space-around;
-    height: 350px;
-    padding:20px 0 50px;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.178), rgba(7, 7, 7, 0),rgba(7, 7, 7, 0)),#000000 ;
+    padding:80px 0;
 }
 .emailContainer{
     display: flex;
