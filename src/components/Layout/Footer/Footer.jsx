@@ -56,7 +56,6 @@ export default function Footer(){
                             autoComplete='off'
                         />
                     </div>
-                    <label htmlFor="message">Digite sua mensagem:</label>
                     <div className={styles.message}>
                         <label htmlFor="message">Digite sua mensagem:</label>
                         <div>
